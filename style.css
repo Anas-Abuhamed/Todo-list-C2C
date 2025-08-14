@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #28a745;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --border-color: #ccc;
+    --hover-color: #218838;
+    --main-text-color: #fff;
+    --drag-color: #e9ecef;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --body-bg-color: #f4f4f4;
+    --header-color: #333;
+    --done-color: gray;
+    --popup-background-color: rgba(0, 0, 0, 0.6);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    position: relative;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 80px auto;
+    text-align: center;
+    background-color: var(--main-text-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--box-shadow);
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: var(--header-color);
+    font-size: 28px;
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-task #task-input {
+    padding: 10px 15px;
+    width: 70%;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.add-task #add-btn {
+    font-size: 24px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--main-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-task #add-btn:hover {
+    background-color: var(--hover-color);
+}
+
+
+.add-task #task-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+
+ul#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+}
+
+ul#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: var(--secondary-color);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+ul#task-list li:hover {
+    background-color: var(--drag-color);
+}
+
+
+.task-text {
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.done .task-text {
+    text-decoration: line-through;
+    color: var(--done-color);
+}
+
+.delete {
+    background-color: var(--primary-color);
+    color: var(--main-text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+    background-color: var(--hover-color);
+}
